@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#235A31</color>
+    <color name="fontColor">#313131</color>
+    <color name="darkFontColor">#2d2f48</color>
+    <color name="fontColorLight">#898989</color>
+    <color name="errorColor">#F57557</color>
+    <color name="secondaryColor">#B3CD43</color>
+    <color name="boxShadowsColor">#FBFBFD</color>
+    <color name="boxShadowDark">#B5B3CA</color>
+    <color name="articleDateColor">#452B4E</color>
+    <color name="primaryBackgroundColor">#FFFFFF</color>
+</resources>

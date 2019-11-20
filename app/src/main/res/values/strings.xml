@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Decagon_class_room</string>
+    <string name="app_get_started_title">teach</string>
+    <string name="app_get_started_description">World-class education for anyone, anywhere.</string>
+    <string name="app_signup">Sign Up</string>
+    <string name="app_login">Log In</string>
+    <string name="app_register_title">Decadev Register</string>
+    <string name="app_register_description">Please use the email registered with your onboarding to decagon</string>
+    <string name="app_register_error">Invalid Email Address</string>
+    <string name="app_register_error1">Email Address is required </string>
+    <string name="app_submit">Submit</string>
+    <string name="app_verification_title">Decadev Verification</string>
+    <string name="app_verification_description">Please verify your account with the code send to your mail and choose your stack</string>
+    <string name="app_verification_stack_error">Stack is required</string>
+    <string name="app_verification_code_error">Code is required</string>
+    <string name="app_choose_stack">Choose Stack</string>
+
+</resources>
