@@ -9,6 +9,7 @@
     <color name="errorColor">#F57557</color>
     <color name="buttonColor">#42AA5E</color>
     <color name="secondaryColor">#B3CD43</color>
+    <color name="submitColor">#368C4C</color>
     <color name="boxShadowsColor">#FBFBFD</color>
     <color name="boxShadowDark">#B5B3CA</color>
     <color name="articleDateColor">#452B4E</color>
