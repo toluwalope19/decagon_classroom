@@ -14,5 +14,12 @@
     <string name="app_verification_stack_error">Stack is required</string>
     <string name="app_verification_code_error">Code is required</string>
     <string name="app_choose_stack">Choose Stack</string>
+    <string name="stack_is_required">stack is required</string>
+    <string name="view_background">view_background</string>
+    <string name="email">Email</string>
+    <string name="code">code</string>
+    <string name="please_input_a_correct_code">Please input a correct code</string>
+    <string name="submit">Submit</string>
+    <string name="todo">TODO</string>
 
 </resources>
