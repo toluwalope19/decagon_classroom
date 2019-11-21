@@ -13,40 +13,71 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_verificationbg"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         android:contentDescription="@string/view_background" />
 
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/app_bar" />
+   <androidx.constraintlayout.widget.Guideline
+       android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+      android:orientation="vertical"
+       app:layout_constraintGuide_percent="0.18357664" />
+
+    <androidx.constraintlayout.widget.Guideline
+       android:id="@+id/guideline2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.783455" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
 
 
     <TextView
         android:id="@+id/verificationTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/panton_bold_regular"
         android:text="@string/app_verification_title"
         android:textColor="@color/fontColor"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@id/guideline3" />
 
     <TextView
         android:id="@+id/verificationText"
         android:layout_width="233dp"
         android:layout_height="70dp"
-        android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/panton_bold_regular"
+        android:gravity="center"
         android:lineSpacingExtra="8dp"
         android:text="@string/app_verification_description"
         android:textAlignment="center"
         android:textColor="@color/fontColorLight"
         android:textStyle="bold"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/verificationTitle" />
 
@@ -84,7 +115,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="70dp"
         android:background="@drawable/edittext"
         android:drawableEnd="@drawable/ic_phone_icon"
