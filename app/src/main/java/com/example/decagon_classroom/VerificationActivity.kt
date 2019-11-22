@@ -7,6 +7,8 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.android.synthetic.main.activity_verification.*
+import kotlinx.android.synthetic.main.app_bar.*
 
 class VerificationActivity : AppCompatActivity() {
 
@@ -18,6 +20,10 @@ class VerificationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verification)
+
+        back_button.setOnClickListener {
+            finish()
+        }
 
         option = findViewById<Spinner>(R.id.spinner)
 

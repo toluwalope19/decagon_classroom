@@ -18,7 +18,7 @@
 
 
     <include
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_verify"
         layout="@layout/app_bar" />
    <androidx.constraintlayout.widget.Guideline
        android:id="@+id/guideline"
