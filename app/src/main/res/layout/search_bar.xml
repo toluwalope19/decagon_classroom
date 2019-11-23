@@ -13,7 +13,7 @@
         <EditText
             android:id="@+id/search_button"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:drawableStart="@drawable/search"
             android:background="@drawable/searchbar"
             android:drawableEnd="@drawable/group"
