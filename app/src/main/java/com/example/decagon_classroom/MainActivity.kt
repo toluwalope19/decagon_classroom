@@ -1,5 +1,7 @@
 package com.example.decagon_classroom
 
+
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         val fragmentManager = supportFragmentManager.beginTransaction()
 
-        fragmentManager.add(R.id.navigation_home, HomeFragment.newInstance(), "home fragment").commit()
+        fragmentManager.add(Fragment, HomeFragment.newInstance(), "home fragment").commit()
 
         bottomNavigationView = findViewById(bottom_navigation)
 
