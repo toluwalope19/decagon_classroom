@@ -164,6 +164,81 @@
             tools:layout_editor_absoluteY="50dp" />
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="7"
+            app:layout_constraintTop_toBottomOf="@id/guideline4"
+            app:layout_constraintLeft_toRightOf="@id/guideline">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/date"
+                    android:contentDescription="calendar"
+                    android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="8dp"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/current_date_day"
+                    android:layout_width="wrap_content"
+                    android:textSize="12dp"
+                    android:layout_height="wrap_content"
+                    android:text="18"/>
+                <TextView
+                    android:id="@+id/current_date_month"
+                    android:textSize="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apr 2019"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="18dp"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/current_topic"
+                    android:layout_width="wrap_content"
+                    android:textSize="12dp"
+                    android:textColor="@color/errorColor"
+                    android:layout_height="wrap_content"
+                    android:text="REACT"/>
+                <TextView
+                    android:id="@+id/current_subTopic"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Introduction to React Hooks"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
