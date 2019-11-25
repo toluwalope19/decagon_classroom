@@ -8,7 +8,7 @@
     </item>
 
     <item
-        android:drawable="@drawable/current_progress" android:width="45dp" android:height="45dp"
+        android:drawable="@drawable/current_progress" android:width="35dp" android:height="35dp"
         />
 
 

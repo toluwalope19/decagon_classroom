@@ -8,7 +8,7 @@
         </item>
 
     <item
-        android:drawable="@drawable/checked" android:width="70dp" android:height="70dp"
+        android:drawable="@drawable/checked" android:width="20dp" android:height="20dp"
         />
 
 
