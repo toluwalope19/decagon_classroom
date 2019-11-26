@@ -30,6 +30,7 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_homepage, container, false)
+        
 
         var articleList =  arrayListOf<Article>()
 
@@ -51,9 +52,9 @@ class HomeFragment : Fragment() {
         articleList.add(paper6)
 
 
-        var recyclerView = view?.findViewById<RecyclerView>(R.id.recycler_viewHome)
-        recyclerView?.layoutManager = LinearLayoutManager(this.activity!!.applicationContext)
-        recyclerView?.adapter=homeArticleAdapter(articleList)
+        var homeRecyclerView = view?.findViewById<RecyclerView>(R.id.recycler_viewHome)
+        homeRecyclerView?.layoutManager = LinearLayoutManager(this.activity!!.applicationContext)
+        homeRecyclerView?.adapter=homeArticleAdapter(articleList)
 
         return view
 

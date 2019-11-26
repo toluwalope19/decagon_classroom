@@ -18,7 +18,7 @@
         android:baselineAligned="false"
         android:orientation="horizontal"
         android:weightSum="5"
-        android:background="@color/secondaryColor"
+        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/back">
@@ -52,7 +52,8 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_width="15dp"
             android:layout_height="100dp"
             android:layout_weight="2"
             android:background="@drawable/round_profile"/>
@@ -61,6 +62,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/notification_section"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:orientation="horizontal"
@@ -87,7 +89,6 @@
             android:weightSum="2">
 
             <TextView
-                android:id="@+id/article_topic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -97,7 +98,6 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/date_of_release"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -120,6 +120,111 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_section"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:paddingLeft="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notification_section">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:contentDescription="image"
+            android:src="@drawable/help_icon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/article_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Get Help"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:src="@drawable/read_more" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:paddingLeft="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/info_section">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:contentDescription="image"
+            android:src="@drawable/message" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Give Us Feedback"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="9dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:contentDescription="arrow"
+            android:src="@drawable/read_more" />
+
+
+    </LinearLayout>
+
+
+
 
 
 
