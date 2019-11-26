@@ -9,6 +9,11 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <include layout="@layout/search_bar"
+        android:id="@+id/main_appbar"
+        />
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:paddingTop="12dp"
