@@ -36,12 +36,12 @@ class HomeFragment : Fragment() {
         var articleList =  arrayListOf<Article>()
 
 
-        val paper1 = Article("21, oct 2019","Electronics defaults", "Ama Benedict")
-        val paper2 = Article("21, oct 2019","Electronics defaults", "Ama Benedict")
-        val paper3 = Article("21, oct 2019","Electronics defaults", "Ama Benedict")
-        val paper4 = Article("21, oct 2019","Electronics defaults", "Ama Benedict")
-        val paper5 = Article("21, oct 2019","Electronics defaults", "Ama Benedict")
-        val paper6 = Article("21, oct 2019","Electronics defaults", "Ama Benedict")
+        val paper1 = Article("21, oct 2019","Genius", "Aman")
+        val paper2 = Article("21, oct 2019","Genius", "Aman")
+        val paper3 = Article("21, oct 2019","Genius", "Aman")
+        val paper4 = Article("21, oct 2019","Genius", "Aman")
+        val paper5 = Article("21, oct 2019","Genius", "Aman")
+        val paper6 = Article("21, oct 2019","Genius", "Aman")
 
 
 

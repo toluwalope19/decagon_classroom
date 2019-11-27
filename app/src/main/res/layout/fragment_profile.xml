@@ -51,12 +51,16 @@
                  />
         </LinearLayout>
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="20dp"
             android:layout_gravity="center"
-            android:layout_width="15dp"
-            android:layout_height="100dp"
+            android:layout_height="86dp"
             android:layout_weight="2"
-            android:background="@drawable/round_profile"/>
+            android:src="@drawable/images"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/submitColor"/>
 
 
     </LinearLayout>
@@ -115,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:src="@drawable/read_more" />
 
 
@@ -196,7 +200,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="5dp"
-            android:layout_weight="6"
+            android:layout_weight="5"
             android:orientation="vertical">
 
 
@@ -216,7 +220,7 @@
             android:layout_width="9dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:contentDescription="arrow"
             android:src="@drawable/read_more" />
 
