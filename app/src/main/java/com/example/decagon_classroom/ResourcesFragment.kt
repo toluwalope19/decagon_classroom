@@ -30,7 +30,25 @@ class ResourcesFragment : Fragment() {
 
         viewPager.adapter= TabAdapter(tabLayout.tabCount, fragmentManager!!)
 
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
 
+            override fun onTabReselected(p0: TabLayout.Tab?) {
+
+            }
+
+            override fun onTabSelected(p0: TabLayout.Tab?) {
+                viewPager.currentItem = p0!!.position
+            }
+
+            override fun onTabUnselected(p0: TabLayout.Tab?) {
+
+            }
+        })
+        viewPager.addOnPageChangeListener(
+            TabLayout.TabLayoutOnPageChangeListener(
+                tabLayout
+            )
+        )
         return view
     }
 
