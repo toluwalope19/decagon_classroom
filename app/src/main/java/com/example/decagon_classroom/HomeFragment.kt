@@ -19,6 +19,7 @@ class HomeFragment : Fragment() {
         fun newInstance(): HomeFragment {
 
 
+
             return HomeFragment()
 
         }
@@ -30,7 +31,7 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_homepage, container, false)
-        
+
 
         var articleList =  arrayListOf<Article>()
 
