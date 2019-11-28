@@ -8,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
+import kotlinx.android.synthetic.main.fragment_homepage.*
 
 /**
  * A simple [Fragment] subclass.
@@ -31,6 +34,17 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_homepage, container, false)
 
+        var books = arrayListOf<Books>(
+
+            Books("Anjana","Meeee"),
+            Books("Anjana","Meeee"),
+            Books("Anjana","Meeee"),
+            Books("Anjana","Meeee")
+        )
+        val viewpager2 = view.findViewById<ViewPager2>(R.id.viewPager2)
+        viewpager2.adapter = CardAdapter(books)
+
+
 
         var articleList =  arrayListOf<Article>()
 
@@ -52,9 +66,12 @@ class HomeFragment : Fragment() {
         articleList.add(paper6)
 
 
+
         var homeRecyclerView = view?.findViewById<RecyclerView>(R.id.recycler_viewHome)
         homeRecyclerView?.layoutManager = LinearLayoutManager(this.activity!!.applicationContext)
+
         homeRecyclerView?.adapter=HomeArticleAdapter(articleList)
+
 
         return view
 
