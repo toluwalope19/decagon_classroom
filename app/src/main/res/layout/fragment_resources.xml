@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/xxlarge"
+        android:padding="@dimen/medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_appbar"
         android:orientation="vertical">
@@ -25,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="Resources"
             android:textStyle="bold"
-            android:textSize="@dimen/textmedium"
+            android:textSize="@dimen/textlarge"
             android:textColor="@color/colorPrimaryDark"/>
 
         <LinearLayout
@@ -39,7 +40,7 @@
                 android:id="@+id/tab_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="10"
+                android:layout_weight="11"
                 tools:layout_editor_absoluteX="2dp">
 
                 <com.google.android.material.tabs.TabItem

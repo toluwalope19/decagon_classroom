@@ -4,12 +4,10 @@ package com.example.decagon_classroom
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class homeArticleAdapter(var articles: ArrayList<Article>): RecyclerView.Adapter<homeArticleAdapter.ContactViewHolder>() {
+class HomeArticleAdapter(var articles: ArrayList<Article>): RecyclerView.Adapter<HomeArticleAdapter.ContactViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,

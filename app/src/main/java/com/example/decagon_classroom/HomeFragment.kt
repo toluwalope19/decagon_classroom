@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_homepage.*
 
 /**
  * A simple [Fragment] subclass.
@@ -55,7 +54,7 @@ class HomeFragment : Fragment() {
 
         var homeRecyclerView = view?.findViewById<RecyclerView>(R.id.recycler_viewHome)
         homeRecyclerView?.layoutManager = LinearLayoutManager(this.activity!!.applicationContext)
-        homeRecyclerView?.adapter=homeArticleAdapter(articleList)
+        homeRecyclerView?.adapter=HomeArticleAdapter(articleList)
 
         return view
 
