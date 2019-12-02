@@ -281,6 +281,9 @@
 
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/viewPager2"
+                    android:layout_gravity="center"
+                    android:paddingEnd="28dp"
+                    android:paddingStart="32dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
