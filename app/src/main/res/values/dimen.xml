@@ -10,4 +10,7 @@
     <dimen name="textlarge">24sp</dimen>
     <dimen name="textxlarge">32sp</dimen>
     <dimen name="textxxlarge">38sp</dimen>
+    <dimen name="pageMargin">60dp</dimen>
+    <dimen name="offset">60dp</dimen>
+    <dimen name="pageMarginAndOffset">120dp</dimen>
 </resources>
