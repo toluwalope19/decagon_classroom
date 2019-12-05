@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".LogInActivity">
 
 
     <ImageView
@@ -21,7 +21,7 @@
         layout="@layout/app_bar" />
 
     <EditText
-        android:id="@+id/Email_register"
+        android:id="@+id/Email_login"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="70dp"
@@ -46,7 +46,7 @@
         android:id="@+id/register_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_register_title"
+        android:text="Decadev Login"
         android:textColor="@color/articleDateColor"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -82,7 +82,7 @@
         android:textColor="@color/errorColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Email_register" />
+        app:layout_constraintTop_toBottomOf="@id/Email_login" />
     <TextView
         android:id="@+id/error_message2"
         android:layout_width="wrap_content"
@@ -94,10 +94,10 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Email_register" />
+        app:layout_constraintTop_toBottomOf="@id/Email_login" />
 
     <Button
-        android:id="@+id/submit_register"
+        android:id="@+id/submit_login"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="28dp"
@@ -109,7 +109,7 @@
         android:layout_marginEnd="90dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Email_register" />
+        app:layout_constraintTop_toBottomOf="@id/Email_login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
