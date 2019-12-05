@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".LogInActivity"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,14 +21,12 @@
         </activity>
         <activity
             android:name=".VerificationActivity"
-            android:parentActivityName=".RegisterActivity"></activity>
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".GetStartedActivity"></activity>
+            android:parentActivityName=".RegisterActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".GetStartedActivity" />
         <activity
             android:name=".MainActivity"
-            android:windowSoftInputMode="stateHidden">
-
-        </activity>
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>
