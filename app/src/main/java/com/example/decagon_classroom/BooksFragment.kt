@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.decagon_classroom.databinding.FragmentArticleBinding
+import com.example.decagon_classroom.databinding.FragmentBooksBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -19,7 +21,8 @@ class BooksFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_books, container, false)
+
+        val binding = FragmentBooksBinding.inflate(inflater,container,false)
 
         var books =  ArrayList<Books>()
 
@@ -44,11 +47,11 @@ class BooksFragment : Fragment() {
         books.add(book8)
         books.add(book9)
 
-        val recyclerV = view.findViewById<RecyclerView>(R.id.recycler_books)
+        val recyclerV = binding.recyclerBooks
         recyclerV?.layoutManager = GridLayoutManager(this.activity!!.applicationContext, 2)
         recyclerV?.adapter=CardAdapter2(books)
 
-        return view
+        return binding.root
     }
 
 

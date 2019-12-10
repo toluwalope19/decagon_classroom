@@ -17,15 +17,12 @@ class LogInActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("USER_CREDENTIALS", MODE_PRIVATE)
         val isloggedin = sharedPreferences.getBoolean("ISLOGGEDIN", false)
 
-        if (isloggedin)
-        {
-            val main = Intent(this@LogInActivity, MainActivity::class.java)
-            startActivity(main)
-        }
+
         val requiredEmail = sharedPreferences.getString("EMAIL", "DEFAULT_EMAIL")
         val login = findViewById<Button>(R.id.submit_login)
 
-        fun onClick(v: View) {
+        login.setOnClickListener {
+
             val email = Email_login.toString()
             if (email == requiredEmail)
             {
@@ -34,5 +31,7 @@ class LogInActivity : AppCompatActivity() {
                 startActivity(main)
             }
         }
+
+        }
     }
-}
+

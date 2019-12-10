@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="book"
+            type="com.example.decagon_classroom.Books" />
+    </data>
+<androidx.cardview.widget.CardView
     android:layout_width="wrap_content"
     android:layout_gravity="center"
     android:backgroundTint="#f0f0f0"
@@ -24,7 +32,7 @@
             android:id="@+id/card_author"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Title"
+            android:text="@{book.name}"
             android:gravity="center"
             android:textSize="@dimen/small"/>
 
@@ -32,7 +40,7 @@
             android:id="@+id/card_booktitle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Author"
+            android:text="@{book.author}"
             android:textColor="@color/errorColor"/>
 
 
@@ -41,3 +49,4 @@
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
+</layout>

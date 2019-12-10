@@ -4,7 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.decagon_classroom.databinding.FragmentBooksBinding
+import com.example.decagon_classroom.databinding.ListRowBookBinding
+import com.example.decagon_classroom.databinding.ListRowBooksBinding
 
 class CardAdapter2 (var books: ArrayList<Books>): RecyclerView.Adapter<CardAdapter2.CardHolder>() {
 
@@ -14,8 +18,10 @@ class CardAdapter2 (var books: ArrayList<Books>): RecyclerView.Adapter<CardAdapt
         viewType: Int
     ): CardHolder {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list__row_books, parent, false)
-        return CardHolder(view)
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = ListRowBooksBinding.inflate(inflater, parent, false)
+
+        return CardHolder(binding)
     }
 
     override fun getItemCount(): Int {
@@ -25,20 +31,32 @@ class CardAdapter2 (var books: ArrayList<Books>): RecyclerView.Adapter<CardAdapt
     override fun onBindViewHolder(holder: CardHolder, position: Int) {
 
         val books = books.get(position)
-        holder.titleText.text=books.name
-        holder.authorText.text=books.Author
+        holder.bind(books)
+
 
     }
 
-    class CardHolder(view: View): RecyclerView.ViewHolder(view){
+    class CardHolder(var binding: ListRowBooksBinding): RecyclerView.ViewHolder(binding.root){
+
+//
+//            var titleText: TextView
+//            var authorText: TextView
+//
+//            init{
+//                titleText=view.findViewById(R.id.card_booktitle)
+//                authorText=view.findViewById(R.id.card_author)
+//            }
+
+        fun bind(books: Books) {
+
+            binding.book = books
+
+//                binding.root.setOnClickListener {
+//                    onItemClickListener.onClickAction(contact)
+//                }
+            binding.executePendingBindings()
 
 
-        var titleText: TextView
-        var authorText: TextView
-
-        init{
-            titleText=view.findViewById(R.id.card_booktitle)
-            authorText=view.findViewById(R.id.card_author)
         }
     }
 }

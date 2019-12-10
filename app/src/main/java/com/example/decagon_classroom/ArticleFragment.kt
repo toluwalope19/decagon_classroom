@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.decagon_classroom.databinding.FragmentArticleBinding
+import com.example.decagon_classroom.databinding.FragmentHomepageBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -19,7 +21,8 @@ class ArticleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_article, container, false)
+
+        val binding = FragmentArticleBinding.inflate(inflater,container,false)
 
         var articleList =  arrayListOf<Article>()
 
@@ -41,11 +44,11 @@ class ArticleFragment : Fragment() {
         articleList.add(paper6)
 
 
-        var homeRecyclerView = view?.findViewById<RecyclerView>(R.id.recycler_viewArticles)
+        var homeRecyclerView = binding.recyclerViewArticles
         homeRecyclerView?.layoutManager = LinearLayoutManager(this.activity!!.applicationContext)
         homeRecyclerView?.adapter=HomeArticleAdapter(articleList)
 
-        return view
+        return binding.root
     }
 
 

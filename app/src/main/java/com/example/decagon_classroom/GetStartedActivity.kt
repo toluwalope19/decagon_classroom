@@ -10,6 +10,13 @@ class GetStartedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_started)
+        val sharedPreferences = getSharedPreferences("USER_CREDENTIALS", MODE_PRIVATE)
+        val isloggedin = sharedPreferences.getBoolean("ISLOGGEDIN", false)
+        if (isloggedin)
+        {
+            val main = Intent(this, MainActivity::class.java)
+            startActivity(main)
+        }
 
         sign_up.setOnClickListener {
 
@@ -17,6 +24,7 @@ class GetStartedActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
+
 
     }
 }

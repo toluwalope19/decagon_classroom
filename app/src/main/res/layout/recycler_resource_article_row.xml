@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="article"
+            type="com.example.decagon_classroom.Article" />
+    </data>
+
+<LinearLayout
+
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_marginBottom="8dp"
@@ -42,7 +53,7 @@
                 android:textSize="12dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="27 feb 2019"/>
+                android:text="@{article.date}"/>
             <TextView
                 android:id="@+id/article_topic"
                 android:layout_weight="1"
@@ -51,7 +62,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_height="wrap_content"
-                android:text="Understanding closures in javascript"/>
+                android:text="@{article.data}"/>
             <TextView
                 android:id="@+id/article_author"
                 android:layout_weight="1"
@@ -60,7 +71,7 @@
                 android:textColor="@color/errorColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dan Abramov"/>
+                android:text="@{article.name}"/>
 
 
 
@@ -81,3 +92,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</layout>
