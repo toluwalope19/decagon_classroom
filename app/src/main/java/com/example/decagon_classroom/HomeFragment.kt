@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
+import com.example.decagon_classroom.databinding.FragmentHomepageBinding
 import kotlinx.android.synthetic.main.fragment_homepage.*
 
 /**
@@ -34,9 +35,10 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_homepage, container, false)
 
-        val viewpager2 = view.findViewById<ViewPager2>(R.id.viewPager2)
+        val binding = FragmentHomepageBinding.inflate(inflater,container,false)
+
+
         var books = arrayListOf<Books>(
 
             Books("Anjana","Meeee"),
@@ -44,19 +46,20 @@ class HomeFragment : Fragment() {
             Books("Anjana","Meeee"),
             Books("Anjana","Meeee")
         )
-        with(viewpager2) {
+        with(binding.viewPager2) {
             clipToPadding = false
             clipChildren = false
             offscreenPageLimit = 3
         }
         val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.pageMargin)
         val offsetPx = resources.getDimensionPixelOffset(R.dimen.offset)
-        viewpager2.setPageTransformer { page, position ->
+        binding.viewPager2.setPageTransformer { page, position ->
             val viewPager = page.parent.parent as ViewPager2
             val offset = position * -(2 * offsetPx + pageMarginPx)
             if (viewPager.orientation == ORIENTATION_HORIZONTAL) {
                 if (ViewCompat.getLayoutDirection(viewPager) == ViewCompat.LAYOUT_DIRECTION_RTL) {
                     page.translationX = -offset
+
                 } else {
                     page.translationX = offset
                 }
@@ -66,7 +69,7 @@ class HomeFragment : Fragment() {
         }
 
 
-        viewpager2.adapter = CardAdapter(books)
+        binding.viewPager2.adapter = CardAdapter(books)
 
 
 
@@ -91,13 +94,13 @@ class HomeFragment : Fragment() {
 
 
 
-        var homeRecyclerView = view?.findViewById<RecyclerView>(R.id.recycler_viewHome)
+        var homeRecyclerView = binding.recyclerViewHome
         homeRecyclerView?.layoutManager = LinearLayoutManager(this.activity!!.applicationContext)
 
         homeRecyclerView?.adapter=HomeArticleAdapter(articleList)
 
 
-        return view
+        return binding.root
 
     }
 

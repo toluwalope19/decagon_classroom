@@ -2,10 +2,10 @@ package com.example.decagon_classroom
 
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.decagon_classroom.databinding.RecyclerHomeRowBinding
 
 class HomeArticleAdapter(var articles: ArrayList<Article>): RecyclerView.Adapter<HomeArticleAdapter.ContactViewHolder>() {
 
@@ -14,9 +14,10 @@ class HomeArticleAdapter(var articles: ArrayList<Article>): RecyclerView.Adapter
         viewType: Int
     ): ContactViewHolder {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_home_row, parent, false)
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = RecyclerHomeRowBinding.inflate(inflater, parent, false)
 
-        return ContactViewHolder(view)
+        return ContactViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
@@ -26,22 +27,35 @@ class HomeArticleAdapter(var articles: ArrayList<Article>): RecyclerView.Adapter
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
 
         val article = articles.get(position)
-        holder.dateText.text= article.date
-        holder.titleText.text=article.data
-        holder.authorText.text=article.name
+        holder.bind(article)
+//        holder.dateText.text= article.date
+//        holder.titleText.text=article.data
+//        holder.authorText.text=article.name
 
     }
 
-    class ContactViewHolder(view: View): RecyclerView.ViewHolder(view){
+    class ContactViewHolder(var binding: RecyclerHomeRowBinding): RecyclerView.ViewHolder(binding.root){
 
-        var dateText : TextView
-        var titleText:TextView
-        var authorText:TextView
+//        var dateText : TextView
+//        var titleText:TextView
+//        var authorText:TextView
+//
+//        init{
+//            dateText=view.findViewById(R.id.date_of_release)
+//            titleText=view.findViewById(R.id.article_topic)
+//            authorText=view.findViewById(R.id.article_author)
+//        }
+        fun bind(article: Article) {
 
-        init{
-            dateText=view.findViewById(R.id.date_of_release)
-            titleText=view.findViewById(R.id.article_topic)
-            authorText=view.findViewById(R.id.article_author)
+            binding.article = article
+
+//            binding.root.setOnClickListener {
+//                onItemClickListener.onClickAction(contact)
+//            }
+//
+            binding.executePendingBindings()
+
+
         }
     }
 }
